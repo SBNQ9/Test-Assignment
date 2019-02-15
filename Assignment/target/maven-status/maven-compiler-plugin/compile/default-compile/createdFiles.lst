@@ -1,0 +1,14 @@
+com\test\Assignment\service\UserVideoService.class
+com\test\Assignment\service\UserService.class
+com\test\Assignment\service\UserServiceInt.class
+com\test\Assignment\controller\UserVideoTestController.class
+com\test\Assignment\AssignmentApplication.class
+com\test\Assignment\repository\UserVideoRepository.class
+com\test\Assignment\service\VideoServiceInt.class
+com\test\Assignment\model\UserVideo.class
+com\test\Assignment\repository\VideoRepository.class
+com\test\Assignment\model\Video.class
+com\test\Assignment\service\UserVideoServiceInt.class
+com\test\Assignment\service\VideoService.class
+com\test\Assignment\model\User.class
+com\test\Assignment\repository\UserRepository.class

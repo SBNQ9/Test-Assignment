@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link data-require="bootstrap-css@4.1.1" data-semver="4.1.1" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <script data-require="angular.js@*" data-semver="4.0.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+  <script data-require="angular.js@*" data-semver="4.0.0" src="script.ts"></script>
+  <script data-require="angular.js@*" data-semver="4.0.0" src="system.config.js"></script>
+  <script data-require="angular.js@*" data-semver="4.0.0" src="tsconfig.json"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div ng-app="app">
+    <div>
+      <br> My favorite topic is:
+      <select ng-model="myVar">
+        <option value="add" selected="selected">Add Details</option>
+        <option value="view">View Details </option>
+      </select>
+      <br>
+    </div>
+    <div ng-switch="myVar">
+      <div ng-switch-when="add">
+        <div class="row" align="center">
+          <div class="column leftHead" align="center">
+            <button toggle-button="" active-text="User" inactive-text="User Group" ng-model="user.state"></button>
+            <br />
+            <div id="notebooks">
+              <input type="text" id="query" ng-model="userquery" />
+              <ul id="notebook_ul">
+                <li ng-repeat="user in user.state | filter:userquery">
+                  name: {{user.name}}
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="column rightHead">
+            <button toggle-button="" active-text="Video" inactive-text="Video Group" ng-model="video.state"></button>
+            <br />
+            <div id="notebooks">
+              <input type="text" id="query" ng-model="videoquery" />
+              <ul id="notebook_ul">
+                <li ng-repeat="video in video.state | filter:videoquery">
+                  name: {{video.name}}
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+        <div align="center">
+          <span>{{details}}</span>
+        <button>ADD User Video Combo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
